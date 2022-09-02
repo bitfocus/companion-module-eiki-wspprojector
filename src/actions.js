@@ -17,7 +17,10 @@ module.exports = {
 					this.status(this.STATUS_OK);
 				} else {
 					this.status(this.STATUS_ERROR);
-					this.log('error', result.status);
+					//this.log('error', result.status);
+					if (result.error) {
+						this.log('error', result.error);
+					}
 					this.setVariable('module_state', 'Error - See Log');
 				}
 			} catch (error) {

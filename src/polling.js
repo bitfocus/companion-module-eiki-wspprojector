@@ -23,7 +23,7 @@ async function getData(type, cmd) {
 			readable.on('end', () => {
 				const content = chunks.join('');
 				try {	
-						self.STATE.powerState = Boolean(parseInt(content));
+						//self.STATE.powerState = Boolean(parseInt(content));
 						self.checkVariables();
 						self.checkFeedbacks();
 				}

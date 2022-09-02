@@ -4,9 +4,10 @@ class EikiWSPProjector {
 	constructor(config) {
 		const apiHost = config.host
 		const apiPort = 80
-		const password = config.password
+		const apiUsername = config.username
+		const apiPassword = config.password
 
-		this.baseUrl = `http://${apiHost}:${apiPort}/`
+		this.baseUrl = `http://${apiUsername}:${apiPassword}@${apiHost}:${apiPort}/`
 
 		this.requestOptions = {
 			method: 'GET',
@@ -36,6 +37,7 @@ class EikiWSPProjector {
 		} catch (err) {
 			return {
 				status: 'failed',
+				error: err.toString()
 			}
 		}
 	}

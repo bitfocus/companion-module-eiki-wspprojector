@@ -25,6 +25,20 @@ module.exports = {
 				regex: this.REGEX_PORT
 			},*/
 			{
+				type: 'textinput',
+				id: 'username',
+				width: 8,
+				label: 'Username',
+				default: 'admin'
+			},
+			{
+				type: 'textinput',
+				id: 'password',
+				width: 8,
+				label: 'Password',
+				default: '0000'
+			},
+			{
 				type: 'text',
 				id: 'dummy1',
 				width: 12,

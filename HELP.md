@@ -3,6 +3,7 @@ This module will allow you to control Eiki WSP Projectors, specifically the LC-W
 
 ## Configuration
 * Enter the IP address of the computer running the software in the configuration settings.
+* Enter the Username and Password required to login to the Projector.
 
 ## Actions
 

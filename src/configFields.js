@@ -45,7 +45,7 @@ module.exports = {
 				label: ' ',
 				value: ' ',
 			},
-			/*{
+			{
 				type: 'text',
 				id: 'info2',
 				label: 'Polling',
@@ -87,7 +87,7 @@ module.exports = {
 				width: 12,
 				label: ' ',
 				value: ' ',
-			},*/
+			},
 			{
 				type: 'checkbox',
 				id: 'verbose',

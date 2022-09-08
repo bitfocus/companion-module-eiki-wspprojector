@@ -12,15 +12,16 @@ This module will allow you to control Eiki WSP Projectors, specifically the LC-W
 
 ## Feedbacks
 
-* 
+* Power State
 
 ## Variables
 
-* 
+* Power State
 
 ## Presets
 
-* 
+* Power On with Power State Feedback
+* Power Off with Power State Feedback
 
 ## Sponsored By
 This module's availability to Companion was sponsored in part by Eric Busby <ebusby@morrisonheights.org>.

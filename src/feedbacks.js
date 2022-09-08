@@ -12,7 +12,7 @@ module.exports = {
         const backgroundColorGreen = self.rgb(0, 255, 0) // Green
         const backgroundColorOrange = self.rgb(255, 102, 0) // Orange
 
-       /* feedbacks['powerState'] = {
+       feedbacks['powerState'] = {
             type: 'boolean',
             label: 'Show Power State On Button',
             description: 'Indicate if Power is in X State',
@@ -41,7 +41,7 @@ module.exports = {
 
                 return false
             }
-        }*/
+        }
 
         self.setFeedbackDefinitions(feedbacks);
     }

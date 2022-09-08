@@ -22,8 +22,13 @@ async function getData(type, cmd) {
 		
 			readable.on('end', () => {
 				const content = chunks.join('');
-				try {	
-						//self.STATE.powerState = Boolean(parseInt(content));
+				try {
+						if (content.indexOf('1') > -1) {
+							self.STATE.powerState = true;
+						}
+						else {
+							self.STATE.powerState = false;
+						}
 						self.checkVariables();
 						self.checkFeedbacks();
 				}
@@ -88,7 +93,7 @@ module.exports = {
 			this.pollingInterval = setInterval(async () => {
 				this.status(this.STATUS_OK);
 
-				//getData.bind(self)('action=pwr'); //or whatever it is to get the data
+				getData.bind(self)('execPwr.cgi'); //get power state
 			}, this.config.pollingrate)
 		}
 	},

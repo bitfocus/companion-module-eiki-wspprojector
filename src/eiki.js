@@ -7,12 +7,17 @@ class EikiWSPProjector {
 		const apiUsername = config.username
 		const apiPassword = config.password
 
-		this.baseUrl = `http://${apiUsername}:${apiPassword}@${apiHost}:${apiPort}/`
+		this.baseUrl = `http://${apiHost}:${apiPort}/protect/`
 
 		this.requestOptions = {
 			method: 'GET',
 			timeout: 10000,
+			headers: {
+				'Authorization': 'Basic ' + Buffer.from(`${apiUsername}:${apiPassword}`, 'binary').toString('base64')
+			}
 		}
+
+		console.log(this.requestOptions);
 	}
 
 	async sendRequest(cmd, uriEncode) {
